@@ -36,7 +36,7 @@ const PostList = () =>
             {
                 dataPost.map( ( item, index ) =>
                     <NavLink to={ `/detailpost/${ item.id }` } key={ index }>
-                        <PostCard username={ item.users.name } company={ item.users.company.name } body={ item.body } />
+                        <PostCard title={ item.title } username={ item.users.name } company={ item.users.company.name } body={ item.body } />
                     </NavLink> )
             }
         </div>
