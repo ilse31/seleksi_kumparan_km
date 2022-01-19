@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import PostCard from '../components/PostCard';
 import { Axios } from '../helpers/API';
@@ -30,17 +31,14 @@ const PostList = () =>
         return { ...posts, users }
     } )
 
-    dataPost.map( item => console.log( item ) )
-
     return (
         <div className='container my-3'>
             {
                 dataPost.map( ( item, index ) =>
-                    <div key={ index }>
+                    <NavLink to={ `/detailpost/${ item.id }` } key={ index }>
                         <PostCard username={ item.users.name } company={ item.users.company.name } body={ item.body } />
-                    </div> )
+                    </NavLink> )
             }
-
         </div>
     );
 };

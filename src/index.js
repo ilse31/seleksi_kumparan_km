@@ -6,14 +6,17 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap/dist/css/bootstrap.css";
 import { RecoilRoot } from "recoil";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={<div>Loading</div>}>
-      <RecoilRoot>
-        <App />
-      </RecoilRoot>
-    </Suspense>
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading</div>}>
+        <RecoilRoot>
+          <App />
+        </RecoilRoot>
+      </Suspense>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

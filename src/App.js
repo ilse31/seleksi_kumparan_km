@@ -1,9 +1,8 @@
-import PostList from "./pages/PostList";
-
+import Routes from "./routes";
 function App() {
   return (
     <div>
-      <PostList />
+      <Routes />
     </div>
   );
 }
